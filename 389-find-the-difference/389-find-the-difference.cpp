@@ -2,16 +2,13 @@ class Solution {
 public:
     char findTheDifference(string s, string t) {
         
-        char ch;
-        sort(s.begin(), s.end());
-        sort(t.begin(), t.end());
-        for(int i=0; i<t.size(); i++){
-            if(s[i] != t[i]){
-                ch = t[i];
-                break;
-            }
+        int sum1=0, sum2=0;
+        for(int i=0; i<s.size(); i++){
+            sum1+=s[i];
+            sum2+=t[i];
         }
-        return ch;
+        sum2+=t[t.size()-1];
         
+        return (sum2-sum1);
     }
 };
