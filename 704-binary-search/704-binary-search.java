@@ -15,8 +15,9 @@ class Solution {
             int mid = (i+j)/2;
             
             if (nums[mid] == target) {
-                idx = mid;
-                break;
+                // idx = mid;
+                // break;
+                return mid;
             }
             else if (target > nums[mid]) {
                 i = mid+1;
