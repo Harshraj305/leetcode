@@ -24,11 +24,9 @@ public:
             }
             else if ((i*i + j*j) < c) {
                 i++;
-                // i = mid -1;
             }
             else {
                 j--;
-                // j = mid +1;
             }
         }
         
