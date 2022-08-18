@@ -6,22 +6,27 @@ public:
             return false;
         }
         
-        int zero = 0, one = 0;
-        while (n) {
-            if ((n & 1) == 0) {
-                zero++;
-            }
-            else {
-                one++;
-            }
+//         int zero = 0, one = 0;
+//         while (n) {
+//             if ((n & 1) == 0) {
+//                 zero++;
+//             }
+//             else {
+//                 one++;
+//             }
             
-            if (one > 1) {
-                return false;
-            }
-            n >>= 1;
-        }
+//             if (one > 1) {
+//                 return false;
+//             }
+//             n >>= 1;
+//         }
         
-        if (zero % 2 == 0) {
+//         if (zero % 2 == 0) {
+//             return true;
+//         }
+//         return false;
+        
+        if ( (__builtin_popcount(n) == 1) && (__builtin_ctz(n) % 2 == 0) ) {
             return true;
         }
         return false;
