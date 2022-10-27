@@ -22,11 +22,9 @@ class Solution{
             
             if (s.size() == 0) {
                 ans.push_back(-1);
-                // s.push(arr[i]);
             }
             else if (s.size() > 0 && s.top() < arr[i]) {
                 ans.push_back(s.top());
-                // s.push(arr[i]);
             }
             else if (s.size() > 0 && s.top() >= arr[i]) {
                 while (s.size() > 0 && s.top() >= arr[i]) {
