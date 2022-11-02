@@ -80,22 +80,6 @@ class Solution
         vector<long long> left = nsl(arr, n);
         vector<long long> right = nsr(arr, n);
         
-        // for (long long i=0; i<n; i++) {
-        //     if (left[i] == -1 && right[i] == -1) {
-        //         maxm = max(maxm, 1*arr[i]);
-        //     }
-        //     else if (left[i] == -1) {
-        //         maxm = max(maxm, (right[i] * arr[i]));
-        //     }
-        //     else if (right[i] == -1) {
-        //         maxm = max(maxm, (int(n)-1-left[i]) * arr[i]);
-        //     }
-        //     else {
-        //         maxm = max(maxm, (right[i]-left[i]-1)*arr[i]);
-        //     }
-        // }
-        
-        
         for (long long i=0; i<n; i++) {
             maxm = max(maxm, (right[i]-left[i]-1)*arr[i]);
         }
